@@ -231,8 +231,10 @@ public class PreviousSegment : IComponent
             previousNameText = InternalComponent.InformationName;
         }
 
+        bool isPossibleTimeSaveNullOrZero = timeSave == null || timeSave == TimeSpan.Zero;
+        bool shouldShowPossibleTimeSave = !isPossibleTimeSaveNullOrZero && Settings.ShowPossibleTimeSave;
         InternalComponent.InformationValue = DeltaFormatter.Format(timeChange)
-            + (Settings.ShowPossibleTimeSave ? " / " + TimeSaveFormatter.Format(timeSave) : "");
+            + (shouldShowPossibleTimeSave ? " / " + TimeSaveFormatter.Format(timeSave) : "");
 
         InternalComponent.Update(invalidator, state, width, height, mode);
     }
