@@ -168,6 +168,7 @@ public class PreviousSegment : IComponent
         DeltaFormatter.Accuracy = Settings.DeltaAccuracy;
         DeltaFormatter.DropDecimals = Settings.DropDecimals;
         TimeSaveFormatter.Accuracy = Settings.TimeSaveAccuracy;
+        TimeSaveFormatter.DropDecimals = true;
 
         TimeSpan? timeChange = null;
         TimeSpan? timeSave = null;
