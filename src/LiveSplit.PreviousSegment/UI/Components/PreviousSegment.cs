@@ -172,6 +172,7 @@ public class PreviousSegment : IComponent
         DeltaFormatter.Accuracy = Settings.DeltaAccuracy;
         DeltaFormatter.DropDecimals = Settings.DropDecimals;
         TimeSaveFormatter.Accuracy = Settings.TimeSaveAccuracy;
+        TimeSaveFormatter.DropDecimals = true; // see alternative implementation via settings: https://github.com/2NightBreed/LiveSplit.PreviousSegment/commit/9b60ebce1fa5b4238233412b3ffb4727d259bbf9
 
         TimeSpan? timeChange = null;
         TimeSpan? timeSave = null;
