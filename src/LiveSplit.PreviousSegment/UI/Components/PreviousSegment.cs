@@ -34,8 +34,14 @@ public class PreviousSegment : IComponent
 
     public PreviousSegment(LiveSplitState state)
     {
-        DeltaFormatter = new DeltaTimeFormatter();
-        TimeSaveFormatter = new PossibleTimeSaveFormatter();
+        DeltaFormatter = new DeltaTimeFormatter()
+        {
+            UseCustomDeltaTimeFormatter = true
+        };
+        TimeSaveFormatter = new PossibleTimeSaveFormatter()
+        {
+            UseCustomDeltaTimeFormatter = true
+        };
         Settings = new PreviousSegmentSettings()
         {
             CurrentState = state
