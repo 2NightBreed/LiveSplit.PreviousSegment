@@ -59,6 +59,7 @@
             this.rdoTimeSaveTenths = new System.Windows.Forms.RadioButton();
             this.rdoTimeSaveHundredths = new System.Windows.Forms.RadioButton();
             this.chkPossibleTimeSave = new System.Windows.Forms.CheckBox();
+            this.chkDropDecimalsPossibleTimeSave = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -387,10 +388,11 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel3.Controls.Add(this.boxTimeSaveAccuracy, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.chkPossibleTimeSave, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.chkDropDecimalsPossibleTimeSave, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -489,11 +491,23 @@
             this.chkPossibleTimeSave.Location = new System.Drawing.Point(7, 6);
             this.chkPossibleTimeSave.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkPossibleTimeSave.Name = "chkPossibleTimeSave";
-            this.chkPossibleTimeSave.Size = new System.Drawing.Size(215, 17);
+            this.chkPossibleTimeSave.Size = new System.Drawing.Size(170, 17);
             this.chkPossibleTimeSave.TabIndex = 42;
             this.chkPossibleTimeSave.Text = "Show Possible Time Save";
             this.chkPossibleTimeSave.UseVisualStyleBackColor = true;
             this.chkPossibleTimeSave.CheckedChanged += new System.EventHandler(this.chkPossibleTimeSave_CheckedChanged);
+            // 
+            // chkDropDecimalsPossibleTimeSave
+            // 
+            this.chkDropDecimalsPossibleTimeSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkDropDecimalsPossibleTimeSave.AutoSize = true;
+            this.chkDropDecimalsPossibleTimeSave.Location = new System.Drawing.Point(187, 6);
+            this.chkDropDecimalsPossibleTimeSave.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.chkDropDecimalsPossibleTimeSave.Name = "chkDropDecimalsPossibleTimeSave";
+            this.chkDropDecimalsPossibleTimeSave.Size = new System.Drawing.Size(260, 17);
+            this.chkDropDecimalsPossibleTimeSave.TabIndex = 43;
+            this.chkDropDecimalsPossibleTimeSave.Text = "Drop Decimals When More Than 1 Minute";
+            this.chkDropDecimalsPossibleTimeSave.UseVisualStyleBackColor = true;
             // 
             // PreviousSegmentSettings
             // 
@@ -558,5 +572,6 @@
         private System.Windows.Forms.RadioButton rdoTimeSaveHundredths;
         private System.Windows.Forms.RadioButton rdoDeltaMilliseconds;
         private System.Windows.Forms.RadioButton rdoMilliseconds;
+        private System.Windows.Forms.CheckBox chkDropDecimalsPossibleTimeSave;
     }
 }
