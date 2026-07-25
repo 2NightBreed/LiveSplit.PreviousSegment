@@ -26,6 +26,7 @@ public partial class PreviousSegmentSettings : UserControl
     public bool DropDecimals { get; set; }
     public bool Display2Rows { get; set; }
     public bool ShowPossibleTimeSave { get; set; }
+    public bool DropDecimalsPossibleTimeSave { get; set; }
     public TimeAccuracy TimeSaveAccuracy { get; set; }
 
     public string Comparison { get; set; }
@@ -48,6 +49,7 @@ public partial class PreviousSegmentSettings : UserControl
         Comparison = "Current Comparison";
         Display2Rows = false;
         ShowPossibleTimeSave = false;
+        DropDecimalsPossibleTimeSave = false;
 
         btnTextColor.DataBindings.Add("BackColor", this, "TextColor", false, DataSourceUpdateMode.OnPropertyChanged);
         chkOverride.DataBindings.Add("Checked", this, "OverrideTextColor", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -57,6 +59,7 @@ public partial class PreviousSegmentSettings : UserControl
         chkDropDecimals.DataBindings.Add("Checked", this, "DropDecimals", false, DataSourceUpdateMode.OnPropertyChanged);
         cmbComparison.DataBindings.Add("SelectedItem", this, "Comparison", false, DataSourceUpdateMode.OnPropertyChanged);
         chkPossibleTimeSave.DataBindings.Add("Checked", this, "ShowPossibleTimeSave", false, DataSourceUpdateMode.OnPropertyChanged);
+        chkDropDecimalsPossibleTimeSave.DataBindings.Add("Checked", this, "DropDecimalsPossibleTimeSave", false, DataSourceUpdateMode.OnPropertyChanged);
     }
 
     private void chkOverride_CheckedChanged(object sender, EventArgs e)
@@ -155,6 +158,7 @@ public partial class PreviousSegmentSettings : UserControl
         Comparison = SettingsHelper.ParseString(element["Comparison"]);
         Display2Rows = SettingsHelper.ParseBool(element["Display2Rows"], false);
         ShowPossibleTimeSave = SettingsHelper.ParseBool(element["ShowPossibleTimeSave"], false);
+        DropDecimalsPossibleTimeSave = SettingsHelper.ParseBool(element["DropDecimalsPossibleTimeSave"]);
         TimeSaveAccuracy = SettingsHelper.ParseEnum(element["TimeSaveAccuracy"], TimeAccuracy.Tenths);
     }
 
@@ -183,6 +187,7 @@ public partial class PreviousSegmentSettings : UserControl
         SettingsHelper.CreateSetting(document, parent, "Comparison", Comparison) ^
         SettingsHelper.CreateSetting(document, parent, "Display2Rows", Display2Rows) ^
         SettingsHelper.CreateSetting(document, parent, "ShowPossibleTimeSave", ShowPossibleTimeSave) ^
+        SettingsHelper.CreateSetting(document, parent, "DropDecimalsPossibleTimeSave", DropDecimalsPossibleTimeSave) ^
         SettingsHelper.CreateSetting(document, parent, "TimeSaveAccuracy", TimeSaveAccuracy);
     }
 
@@ -208,6 +213,6 @@ public partial class PreviousSegmentSettings : UserControl
 
     private void chkPossibleTimeSave_CheckedChanged(object sender, EventArgs e)
     {
-        rdoTimeSaveSeconds.Enabled = rdoTimeSaveTenths.Enabled = rdoTimeSaveHundredths.Enabled = boxTimeSaveAccuracy.Enabled = chkPossibleTimeSave.Checked;
+        rdoTimeSaveSeconds.Enabled = rdoTimeSaveTenths.Enabled = rdoTimeSaveHundredths.Enabled = rdoMilliseconds.Enabled = chkDropDecimalsPossibleTimeSave.Enabled = boxTimeSaveAccuracy.Enabled = chkPossibleTimeSave.Checked;
     }
 }
