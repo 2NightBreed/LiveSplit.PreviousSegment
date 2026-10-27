@@ -75,7 +75,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -228,7 +228,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnColor2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnColor2.Location = new System.Drawing.Point(190, 3);
+            this.btnColor2.Location = new System.Drawing.Point(191, 3);
             this.btnColor2.Name = "btnColor2";
             this.btnColor2.Size = new System.Drawing.Size(23, 23);
             this.btnColor2.TabIndex = 1;
@@ -241,7 +241,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnColor1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnColor1.Location = new System.Drawing.Point(161, 3);
+            this.btnColor1.Location = new System.Drawing.Point(162, 3);
             this.btnColor1.Name = "btnColor1";
             this.btnColor1.Size = new System.Drawing.Size(23, 23);
             this.btnColor1.TabIndex = 0;
@@ -254,7 +254,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(3, 8);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 13);
+            this.label11.Size = new System.Drawing.Size(153, 13);
             this.label11.TabIndex = 35;
             this.label11.Text = "Background Color:";
             // 
@@ -267,9 +267,9 @@
             "Plain",
             "Vertical",
             "Horizontal"});
-            this.cmbGradientType.Location = new System.Drawing.Point(219, 4);
+            this.cmbGradientType.Location = new System.Drawing.Point(220, 4);
             this.cmbGradientType.Name = "cmbGradientType";
-            this.cmbGradientType.Size = new System.Drawing.Size(240, 21);
+            this.cmbGradientType.Size = new System.Drawing.Size(239, 21);
             this.cmbGradientType.TabIndex = 2;
             this.cmbGradientType.SelectedIndexChanged += new System.EventHandler(this.cmbGradientType_SelectedIndexChanged);
             // 
@@ -344,9 +344,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.cmbComparison, 3);
             this.cmbComparison.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbComparison.FormattingEnabled = true;
-            this.cmbComparison.Location = new System.Drawing.Point(161, 33);
+            this.cmbComparison.Location = new System.Drawing.Point(162, 33);
             this.cmbComparison.Name = "cmbComparison";
-            this.cmbComparison.Size = new System.Drawing.Size(298, 21);
+            this.cmbComparison.Size = new System.Drawing.Size(297, 21);
             this.cmbComparison.TabIndex = 3;
             this.cmbComparison.SelectedIndexChanged += new System.EventHandler(this.cmbComparison_SelectedIndexChanged);
             // 
@@ -356,7 +356,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 37);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(152, 13);
+            this.label12.Size = new System.Drawing.Size(153, 13);
             this.label12.TabIndex = 41;
             this.label12.Text = "Comparison:";
             // 
@@ -367,7 +367,7 @@
             this.chkTwoRows.Location = new System.Drawing.Point(7, 64);
             this.chkTwoRows.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.chkTwoRows.Name = "chkTwoRows";
-            this.chkTwoRows.Size = new System.Drawing.Size(148, 17);
+            this.chkTwoRows.Size = new System.Drawing.Size(149, 17);
             this.chkTwoRows.TabIndex = 4;
             this.chkTwoRows.Text = "Display 2 Rows";
             this.chkTwoRows.UseVisualStyleBackColor = true;
