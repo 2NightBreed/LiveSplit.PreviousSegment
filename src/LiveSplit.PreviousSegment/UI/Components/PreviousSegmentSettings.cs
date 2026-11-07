@@ -208,6 +208,6 @@ public partial class PreviousSegmentSettings : UserControl
 
     private void chkPossibleTimeSave_CheckedChanged(object sender, EventArgs e)
     {
-        rdoTimeSaveSeconds.Enabled = rdoTimeSaveTenths.Enabled = rdoTimeSaveHundredths.Enabled = boxTimeSaveAccuracy.Enabled = chkPossibleTimeSave.Checked;
+        rdoTimeSaveSeconds.Enabled = rdoTimeSaveTenths.Enabled = rdoTimeSaveHundredths.Enabled = rdoMilliseconds.Enabled = boxTimeSaveAccuracy.Enabled = chkPossibleTimeSave.Checked;
     }
 }
