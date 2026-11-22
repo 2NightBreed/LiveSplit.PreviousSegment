@@ -233,8 +233,25 @@ public class PreviousSegment : IComponent
         bool isPossibleTimeSaveNullOrZero = isPossibleTimeSaveNull || isPossibleTimeSaveZero;
         bool shouldShowPossibleTimeSave = !isPossibleTimeSaveNullOrZero && Settings.ShowPossibleTimeSave;
 
-        InternalComponent.InformationValue = DeltaFormatter.Format(timeChange)
-            + (shouldShowPossibleTimeSave ? " / " + TimeSaveFormatter.Format(timeSave) : "");
+        string deltaText = DeltaFormatter.Format(timeChange);
+        string timeSaveText = shouldShowPossibleTimeSave ? TimeSaveFormatter.Format(timeSave) : null;
+        InternalComponent.InformationValue = deltaText
+            + (timeSaveText != null ? " / " + timeSaveText : "");
+
+        Color textColor = Settings.OverrideTextColor ? Settings.TextColor : state.LayoutSettings.TextColor;
+        Color deltaColor = InternalComponent.ValueLabel.ForeColor;
+        InternalComponent.ValueLabel.TextSegments =
+            timeSaveText != null
+                ? new[]
+                {
+                    new SimpleLabel.TextSegment(deltaText, deltaColor),
+                    new SimpleLabel.TextSegment(" / ", textColor),
+                    new SimpleLabel.TextSegment(timeSaveText, state.LayoutSettings.AheadGainingTimeColor)
+                }
+                : new[]
+                {
+                    new SimpleLabel.TextSegment(deltaText, deltaColor)
+                };
 
         InternalComponent.Update(invalidator, state, width, height, mode);
     }
